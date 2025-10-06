@@ -14,7 +14,12 @@ This project implements a **reaction time tester** using an Arduino Uno, two but
 - Wait for the green LED to turn on — then press as fast as possible.
 - The display shows your reaction time in milliseconds.  
 - Your best results are saved automatically in EEPROM.  
-- Press the menu button to view the **Top scores**.  
+- Press the menu button to view the **Top scores**.
+
+---
+
+## Picture of the circuit
+![Circuit picture](circuit.jpeg)
 
 ---
 
