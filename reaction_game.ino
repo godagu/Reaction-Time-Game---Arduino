@@ -75,17 +75,13 @@ State next_state_after_display = IDLE;
 
 // interrupt for main play button
 void button_ISR() {
-    uint32_t t = ms_ticks;
-    bool current_low = (digitalRead(BUTTON_PIN) == LOW);
-
-    // anything under 250 ms disregarded (for debouncing)
+    uint32_t t = ms_ticks;    // anything under 250 ms disregarded (for debouncing)
     if ((int32_t)(t - last_button_event_time) < 250) {
         return;
     } 
 
     last_button_event_time = t;
-
-    if (!current_low) button_pressed = true;
+    button_pressed = true;
 }
 
 // interrupt for menu button
@@ -303,7 +299,7 @@ void setup() {
     setupTimer1_1ms();
     load_top_scores_from_EEPROM();
 
-    attachInterrupt(digitalPinToInterrupt(BUTTON_PIN), button_ISR, CHANGE);
+    attachInterrupt(digitalPinToInterrupt(BUTTON_PIN), button_ISR, FALLING);
     attachInterrupt(digitalPinToInterrupt(BUTTON_MENU_PIN), menu_ISR, FALLING);
 }
 
