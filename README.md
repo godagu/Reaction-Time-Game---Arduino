@@ -1,8 +1,8 @@
 # Reaction Time Game (Arduino)
 
 **Author:** Goda Gutparakyte  
-**Course:** Intro to Robotics @ Vilnius University  
-**Assignment:** HW2 — Reaction Time Game  
+**Course:** Introduction to Robotics at Vilnius University  
+**Assignment:** HW2 
 **Last Updated:** 2025-10-06  
 
 ---
