@@ -19,7 +19,7 @@ This project implements a **reaction time tester** using an Arduino Uno, two but
 ---
 
 ## Picture of the circuit
-![Circuit picture](circuit.jpeg)
+![Circuit picture](circuit.jpg)
 
 ---
 
