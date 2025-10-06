@@ -80,7 +80,7 @@ Top scores are stored persistently in EEPROM to survive power cycles.
 
 ##  Wiring
 
-![Wiring schematic](docs/wiring.png)
+![Wiring schematic](wiring_schematic.pdf)
 
 
 
