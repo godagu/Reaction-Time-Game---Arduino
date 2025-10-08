@@ -2,7 +2,7 @@
 
 **Author:** Goda Gutparakyte  
 **Course:** Introduction to Robotics at Vilnius University  
-**Assignment:** HW2 
+**Assignment:** HW2   
 **Last Updated:** 2025-10-06  
 
 ---
@@ -19,7 +19,7 @@ Logic:
 ---
 
 ## Picture of the circuit
-![Circuit picture](circuit.jpeg)
+![Circuit picture](circuit.jpg)
 
 ---
 
