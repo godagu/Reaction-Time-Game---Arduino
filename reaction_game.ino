@@ -1,7 +1,7 @@
 // Author: Goda Gutparakyte
 // Assignment: HW2 Intro to Robotics at Vilnius university
 // Description: Reaction time game
-// Last upfated: 2025 10 07
+// Last upfated: 2025 10 08
 
 #include <LiquidCrystal.h>
 #include <avr/interrupt.h>
@@ -85,18 +85,15 @@ void button_ISR() {
 }
 
 // interrupt for menu button
-void menu_ISR() {
-    static uint32_t last_event = 0;
+void menu_ISR(){
     uint32_t t = ms_ticks;
-    // debouncing logic
-    if ((int32_t)(t - last_event) > 50) {
-        last_event = t;
-        if (digitalRead(BUTTON_MENU_PIN) == LOW) {
-            menu_pressed = true;
-        }
+    if((int32_t)(t - last_button_event_time) < 250){
+        return;
     }
-}
 
+    last_button_event_time = t;
+    menu_pressed = true;
+}
 
 // EEPROM utilities
 
@@ -294,6 +291,11 @@ void setup() {
 
     digitalWrite(LED_GREEN_PIN, LOW);
     digitalWrite(LED_RED_PIN, HIGH);
+
+    // clearing EEPROM 
+    //for (int i = 0; i <= EEPROM.length(); ++i){
+      //  EEPROM.write(i, 0);
+    //}
 
     randomSeed(analogRead(A0));
     setupTimer1_1ms();
